@@ -284,20 +284,20 @@ export default function GPACalculator() {
                     <div className="h-full w-full flex flex-col items-center justify-center">
                         <p className="text-xl">Semester 5 Grades</p>
                         <Semester5Inputs markState={markState} setMarkState={setMarkState} />
-                        <div className="mt-8 w-fit px-4 p-2 rounded-lg bg-secondary border-2 border-blue-400 text-secondary-foreground">
+                        <div className="mt-8 w-fit px-4 p-2 rounded-lg bg-secondary border-2 border-green-400 text-secondary-foreground">
                             Total: {calculateS5Total(markState)}% ({getMarkLabel(calculateS5Total(markState))})
                         </div>
                     </div>
                     <div className="h-full w-full flex flex-col items-center justify-center">
                         <p className="text-xl">Semester 6 Grades</p>
                         <Semester6Inputs markState={markState} setMarkState={setMarkState} />
-                        <div className="mt-8 w-fit px-4 p-2 rounded-lg bg-secondary border-2 border-blue-400 text-secondary-foreground">
+                        <div className="mt-8 w-fit px-4 p-2 rounded-lg bg-secondary border-2 border-green-400 text-secondary-foreground">
                             Total: {calculateS6Total(markState)}% ({getMarkLabel(calculateS6Total(markState))})
                         </div>
                     </div>
                 </div>
                 <div className="col-span-2 w-full flex flex-col items-center justify-center size-fit">
-                    <div className="bg-secondary rounded-lg p-2 w-fit px-4 border-2 border-blue-600">
+                    <div className="bg-secondary rounded-lg p-2 w-fit px-4 border-2 border-green-600">
                         Combined Total: {calculateTotal(markState)}% ({getMarkLabel(calculateTotal(markState))})
                     </div>
                     <div className="gap-2 grid grid-cols-2 mt-2">

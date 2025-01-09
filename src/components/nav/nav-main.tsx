@@ -18,9 +18,9 @@ import {
     SidebarMenuSubItem,
     useSidebar,
 } from "~/components/ui/sidebar"
-import { type Data } from "./app-sidebar"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { type Data } from "~/constants"
 
 export function NavMain({
     items,

@@ -8,6 +8,7 @@ import {
     SidebarMenuItem,
 } from "~/components/ui/sidebar"
 import { ThemeSwitch } from "../theme/theme-switch"
+import Link from "next/link"
 
 export function NavHeader() {
     return (
@@ -20,9 +21,9 @@ export function NavHeader() {
                         <PencilRulerIcon size={14} />
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight">
-                        <span className="truncate font-semibold">
-                            Tools
-                        </span>
+                        <Link href="/" className="truncate font-semibold">
+                            Toolbox
+                        </Link>
                     </div>
                     <div className="group-data-[state=collapsed]:hidden">
                         <ThemeSwitch />

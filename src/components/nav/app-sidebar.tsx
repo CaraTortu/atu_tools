@@ -1,11 +1,6 @@
 "use client"
 
 import * as React from "react"
-import {
-    type LucideIcon,
-    SquareTerminal,
-} from "lucide-react"
-
 import { NavMain } from "~/components/nav/nav-main"
 import { NavHeader } from "~/components/nav/nav-header"
 import {
@@ -14,31 +9,7 @@ import {
     SidebarHeader,
     SidebarRail,
 } from "~/components/ui/sidebar"
-
-export type Data = {
-    title: string,
-    icon: LucideIcon,
-    isActive?: boolean,
-    items?: {
-        title: string,
-        url: string,
-    }[],
-}[]
-
-// This is sample data.
-const data: Data = [
-    {
-        title: "Calculators",
-        icon: SquareTerminal,
-        isActive: true,
-        items: [
-            {
-                title: "GPA",
-                url: "/calculators/gpa",
-            },
-        ],
-    },
-]
+import { url_data } from "~/constants"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
@@ -48,7 +19,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarHeader>
             <SidebarRail />
             <SidebarContent>
-                <NavMain items={data} />
+                <NavMain items={url_data} />
             </SidebarContent>
         </Sidebar>
     )
