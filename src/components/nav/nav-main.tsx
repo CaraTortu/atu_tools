@@ -18,9 +18,9 @@ import {
     SidebarMenuSubItem,
     useSidebar,
 } from "~/components/ui/sidebar"
-import { type Data } from "./app-sidebar"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { type Data } from "~/constants"
 
 export function NavMain({
     items,
@@ -44,7 +44,7 @@ export function NavMain({
                     <Collapsible
                         key={item.title}
                         asChild
-                        defaultOpen={item.isActive}
+                        defaultOpen={item.items?.some((subItem) => currentUrl === subItem.url)}
                         className="group/collapsible"
                     >
                         <SidebarMenuItem>
