@@ -1,0 +1,22 @@
+name: "Lint code"
+
+on:
+  push:
+    branches:
+      - "dev"
+
+jobs:
+  compile:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: "oven-sh/setup-bun@v2"
+      
+      - name: Install dependencies
+        run: bun i
+      
+      - run: cp .env.example .env 
+
+      - name: Compile code
+        run: bun run lint
+
