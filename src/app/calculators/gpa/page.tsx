@@ -174,7 +174,7 @@ function Semester({
                                 <Button
 
                                     size="icon"
-                                    onClick={() => subjects.append({ name: "", grade: 0, credits: 0 })}
+                                    onClick={() => subjects.append({ name: "", grade: 0, credits: 5 })}
                                 >
                                     <PlusIcon />
                                 </Button>
@@ -239,7 +239,7 @@ export default function GPACalculator() {
                             <TooltipTrigger asChild>
                                 <Button
                                     className="h-12 aspect-square"
-                                    onClick={() => semesters.append({ name: "", subjects: [{ name: "", grade: 0, credits: 0 }] })}
+                                    onClick={() => semesters.append({ name: "", subjects: [{ name: "", grade: 0, credits: 5 }] })}
                                 >
                                     <PlusIcon />
                                 </Button>
