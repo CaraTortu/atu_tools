@@ -6,6 +6,7 @@ import { ThemeProvider } from "~/components/theme/theme-provider";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "~/components/ui/sidebar";
 import { AppSidebar } from "~/components/nav/app-sidebar";
 import { Toaster } from "~/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
     title: "Javierie Toolbox",
@@ -38,6 +39,7 @@ export default function RootLayout({
                         </SidebarInset>
                     </SidebarProvider>
                     <Toaster />
+                    <Analytics />
                 </ThemeProvider>
             </body>
         </html>
